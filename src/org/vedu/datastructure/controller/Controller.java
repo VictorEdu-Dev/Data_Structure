@@ -1,21 +1,20 @@
 package org.vedu.datastructure.controller;
 
-import org.vedu.datastructure.impl.StackList;
-import org.vedu.datastructure.service.Stack;
+import org.vedu.datastructure.impl.ArrayQueue;
+import org.vedu.datastructure.service.Queue;
 
 public class Controller {
     public static void main(String... strings) {
-        Stack<String> st = new StackList<>();
-        st.push("Victor");
-        st.push("Clara");
-        st.push("Camille");
-        
-        
+    	Queue<String> queue = new ArrayQueue<>();
 
-        Stack<String> reversedStack = st.reverse();
-
-        while (reversedStack.getHeight() > 0) {
-            System.out.println(reversedStack.pop());
+        queue.enqueue("Victor");
+        queue.enqueue("Camille");
+        queue.enqueue("Clara");
+        queue.enqueue("Gislene");
+        
+        while(queue.getLast() != null) {
+        	System.out.println(queue.dequeue());
         }
+        
     }
 }
