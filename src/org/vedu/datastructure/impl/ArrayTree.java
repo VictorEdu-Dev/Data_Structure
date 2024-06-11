@@ -5,7 +5,7 @@ import java.util.Queue;
 
 import org.vedu.datastructure.service.Tree;
 
-public class TreeList<E> implements Tree<E> {
+public class ArrayTree<E> implements Tree<E> {
 	private Node root;
 
 	@Override
